@@ -2,14 +2,21 @@
   "name": "my-content-hub",
   "private": true,
   "workspaces": [
-    "apps/backend",
-    "apps/ai-worker",
-    "libs/*"
+    "backend",
+    "ai-worker"
   ],
-  "scripts": {
-    "dev:backend": "npm run start:dev --workspace apps/backend",
-    "dev:worker": "npm start --workspace apps/ai-worker",
-    "build": "npm run build --workspaces",
-    "lint": "echo 'add linting here'"
+
+   "main": "index.js",
+   "scripts": {
+    "start:backend": "npm start --prefix backend",
+    "start:ai-worker": "npm start --prefix ai-worker",
+    "install:all": "npm install && npm install --prefix backend && npm install --prefix ai-worker",
+    "prisma:generate": "npx prisma generate --schema=./backend/prisma/schema.prisma",
+    "prisma:migrate:dev": "npx prisma migrate dev --schema=./backend/prisma/schema.prisma",
+    "prisma:migrate:deploy": "npx prisma migrate deploy --schema=./backend/prisma/schema.prisma",
+    "prisma:studio": "npx prisma studio --schema=./backend/prisma/schema.prisma"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0"
   }
 }
