@@ -1,0 +1,26 @@
+{
+  "name": "secondbrain-backend",
+  "version": "1.0.0",
+  "description": "Second Brain -> a secondary storage to your docs, videos, images etc",
+  "homepage": "https://github.com/Shivam-1827/SecondBrain-Backend#readme",
+  "bugs": {
+    "url": "https://github.com/Shivam-1827/SecondBrain-Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shivam-1827/SecondBrain-Backend.git"
+  },
+  "license": "ISC",
+  "author": "Shivam Yadav",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.0.0",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "nodemon": "^3.1.10"
+  }
+}
